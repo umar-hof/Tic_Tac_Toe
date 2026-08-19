@@ -25,7 +25,6 @@ const resetGame = () => {
 
 boxes.forEach((box) => {
     box.addEventListener('click', () => {
-        console.log('Box clicked');
         if (turnO) {
             box.innerText = 'O';
             turnO = false;
@@ -66,7 +65,6 @@ const checkWinner = () => {
 
         if (pos1Value != '' && pos2Value != '' && pos3Value != '') {
             if (pos1Value === pos2Value && pos2Value === pos3Value) {
-                console.log(`Winner: ${pos1Value}`);
                 showWinnerMessage(pos1Value);
             }
         }
